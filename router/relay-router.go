@@ -13,9 +13,9 @@ func SetRelayRouter(router *gin.Engine) {
 	{
 		relayV1Router.GET("/models", controller.ListModels)
 		relayV1Router.GET("/models/:model", controller.RetrieveModel)
-		relayV1Router.POST("/completions", controller.RelayNotImplemented)
+		relayV1Router.POST("/completions", controller.Relay)
 		relayV1Router.POST("/chat/completions", controller.Relay)
-		relayV1Router.POST("/edits", controller.RelayNotImplemented)
+		relayV1Router.POST("/edits", controller.Relay)
 		relayV1Router.POST("/images/generations", controller.RelayNotImplemented)
 		relayV1Router.POST("/images/edits", controller.RelayNotImplemented)
 		relayV1Router.POST("/images/variations", controller.RelayNotImplemented)
